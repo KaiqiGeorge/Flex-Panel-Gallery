@@ -1,5 +1,4 @@
 html {
-  font-size: 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 200;
   background-color: rgb(19, 17, 17);
@@ -35,7 +34,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .panel1 {
@@ -54,24 +54,39 @@ body {
   background-image: url(./fox.jpeg);
 }
 
-
 .panel p:nth-child(2) {
-    font-size: 2em;
+  font-size: 2em;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+.panel.active {
+  font-size: 35px;
+  flex: 7;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    font-size: 15px;
+
+    padding: 0;
+  }
+  .panel p:nth-child(2) {
+    font-size: 1.4em;
   }
 
-.panel>*:first-child{
-    transform: translateY(-100%);
-}
-.panel.open-active>*:first-child{
-    transform: translateY(0);
-}
-.panel>*:last-child{
-    transform: translateY(100%);
-}
-.panel.open-active>*:last-child{
-    transform: translateY(0);
-}
-.panel.active{
-    font-size: 35px;
-    flex:7;
+  .panel.active {
+    font-size: 30px;
+    flex: 5;
+  }
 }
