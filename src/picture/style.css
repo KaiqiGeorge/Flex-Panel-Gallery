@@ -1,0 +1,77 @@
+html {
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 200;
+  background-color: rgb(19, 17, 17);
+}
+body {
+  margin: 0;
+}
+.panels {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 15px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.5s cubic-bezier(0.075, -0.82, 0.165, -0.1),
+    flex 0.7s cubic-bezier(0.19, 1, 0.22, 1), background 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel p {
+  color: white;
+  text-transform: uppercase;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.panel1 {
+  background-image: url(./northern\ light.webp);
+}
+.panel2 {
+  background-image: url(./snowmountain.jpeg);
+}
+.panel3 {
+  background-image: url(./hawaii.jpeg);
+}
+.panel4 {
+  background-image: url(./flashlight.jpeg);
+}
+.panel5 {
+  background-image: url(./fox.jpeg);
+}
+
+
+.panel p:nth-child(2) {
+    font-size: 2em;
+  }
+
+.panel>*:first-child{
+    transform: translateY(-100%);
+}
+.panel.open-active>*:first-child{
+    transform: translateY(0);
+}
+.panel>*:last-child{
+    transform: translateY(100%);
+}
+.panel.open-active>*:last-child{
+    transform: translateY(0);
+}
+.panel.active{
+    font-size: 35px;
+    flex:7;
+}
